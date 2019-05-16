@@ -13,6 +13,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class BlazeDemoTests {
 	
@@ -48,6 +49,27 @@ public class BlazeDemoTests {
 		String urlPage2 = driver.getCurrentUrl();
 		System.out.println(urlPage2);
 		
+		WebElement outputDiv = driver.findElement(By.className("container"));
+		String actualOutput = outputDiv.getText();
+
+		String expectedOutput = "Destination of the week: Hawaii !";
+		
+		
+		
+	}
+	
+	public void testDropdown() {
+		
+//		WebElement mySelectElm = driver.findElement(By.id("mySelectID")); 
+//		Select mySelect= new Select(mySelectElm);
+//		selMySelect.selectByVisibleText("Option");
+		
+		
+		Select drpdown = (Select) driver.findElement(By.name("fromPort"));
+
+		Select mySel = new Select((WebElement) drpdown);
+		mySel.
+
 	}
 
 }
