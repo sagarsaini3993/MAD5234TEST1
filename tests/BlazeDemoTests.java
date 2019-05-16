@@ -60,16 +60,17 @@ public class BlazeDemoTests {
 	
 	public void testDropdown() {
 		
-//		WebElement mySelectElm = driver.findElement(By.id("mySelectID")); 
-//		Select mySelect= new Select(mySelectElm);
-//		selMySelect.selectByVisibleText("Option");
+
 		
 		
 		Select drpdown = (Select) driver.findElement(By.name("fromPort"));
 
-		Select mySel = new Select((WebElement) drpdown);
-		mySel.
+//		Select mySel = new Select((WebElement) drpdown);
 
+	}
+	
+	public void test1() {
+		driver.findElement(By.name("toPort")).sendKeys("New York");
 	}
 
 }
